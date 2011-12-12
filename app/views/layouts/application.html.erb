@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Blog</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Blog</title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<%= yield %>
+    <div id='container'>
+      <div id='header'>
+        Blogão do Rafão
+      </div>
+      <div id='navigation'>
+        <ul>
+          <li><%= link_to 'Posts', posts_path %></li>
+          <li><%= link_to 'Authors', authors_path %></li>
+        </ul>
+        <div id='content'>
+          <%= yield %>
+        </div>
+      </div>
+      <div id='right_content'>
+      </div>
+    </div>
 
-</body>
+  </body>
 </html>
